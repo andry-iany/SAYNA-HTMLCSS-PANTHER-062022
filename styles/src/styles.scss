@@ -1,7 +1,39 @@
-@use "partials/reboot";
 @use "partials/mixins";
 @use "partials/variables";
+@use "partials/reboot";
 
 * {
   background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: uppercase;
+    width: 95%;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+
+    @include mixins.mq_md {
+      padding: 2rem 3rem;
+    }
+  }
+  &-links {
+    display: flex;
+    gap: 3rem;
+    font-family: "BEYNO", sans-serif;
+    font-size: 2rem;
+  }
+  &-link:hover {
+    text-decoration: underline;
+  }
+  &-link-active {
+    text-decoration: underline;
+    color: variables.$violet-1;
+  }
 }
