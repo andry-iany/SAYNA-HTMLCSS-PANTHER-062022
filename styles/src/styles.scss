@@ -185,12 +185,21 @@ body {
   }
 }
 
+.section {
+  &-title {
+    font-family: "BEYNO", sans-serif;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    color: variables.$violet-1;
+  }
+}
+
 // TODO: make it responsive
 .section-actor {
   display: flex;
   flex: 0 0 auto;
   width: 96%;
-  margin: 0 0 3rem auto;
+  margin: 0 0 10rem auto;
   padding-left: 4rem;
   background: variables.$blue-3;
   position: relative;
@@ -234,5 +243,102 @@ body {
   &-text {
     padding: 3rem 2rem;
     min-width: 350px;
+  }
+}
+
+.section-quote {
+  font-size: 0.875rem;
+}
+
+.section-hero {
+  display: flex;
+  flex-direction: column-reverse;
+  width: 85%;
+  margin: 0 auto;
+
+  &-text {
+    padding: 3rem 8% 0 5%;
+    text-align: justify;
+    width: 100%;
+  }
+
+  &-text p {
+    margin-bottom: 1.2rem;
+    text-align: justify;
+  }
+
+  &-bio-wrapper {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &-bio {
+    padding: 0 2rem 6rem 2rem;
+    margin: 8rem 0 5rem 0;
+    border-radius: 0.875rem;
+    background: variables.$white;
+    color: variables.$blue-3;
+  }
+
+  &-bio + img {
+    margin-bottom: 3rem;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &-bio-image {
+    margin: 0 auto 1rem 0;
+    img {
+      margin-top: -60%;
+    }
+  }
+  &-bio-name {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .status-group {
+    display: flex;
+    gap: 0.5rem 0.25rem;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+
+    &-item {
+      background-color: variables.$blue-1;
+      color: variables.$white;
+      padding: 0.5rem 0.75rem;
+      font-size: 0.8rem;
+      border-radius: 5px;
+    }
+  }
+
+  @include mixins.mq_md {
+    &-bio {
+      margin: 12rem 0 5rem 0;
+    }
+  }
+  @include mixins.mq_md {
+    flex-direction: row;
+    &-bio {
+      margin: 10rem 0 5rem 0;
+    }
+    &-text {
+      width: 60%;
+    }
+    &-bio-wrapper {
+      width: 40%;
+    }
+  }
+  @include mixins.mq_lg {
+    &-text {
+      width: 66%;
+    }
+    &-bio-wrapper {
+      width: 33%;
+    }
   }
 }
