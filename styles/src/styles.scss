@@ -185,6 +185,7 @@ body {
   }
 }
 
+// TODO: make it responsive
 .section-actor {
   display: flex;
   flex: 0 0 auto;
@@ -192,6 +193,21 @@ body {
   margin: 0 0 3rem auto;
   padding-left: 4rem;
   background: variables.$blue-3;
+  position: relative;
+
+  &-btn-next {
+    height: 2rem;
+    width: 2rem;
+    background: variables.$blue-2;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
   &-wrapper {
     display: flex;
@@ -205,19 +221,18 @@ body {
   &-image {
     min-width: 250px;
     max-width: 250px;
-
-    img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: cover;
-      object-position: top;
-    }
   }
+
+  &-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: top;
+  }
+
   &-text {
     padding: 3rem 2rem;
     min-width: 350px;
-  }
-  @include mixins.mq_md {
   }
 }

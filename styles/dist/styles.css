@@ -207,6 +207,20 @@ body {
   margin: 0 0 3rem auto;
   padding-left: 4rem;
   background: #021740;
+  position: relative;
+}
+.section-actor-btn-next {
+  height: 2rem;
+  width: 2rem;
+  background: #07338c;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  right: 2rem;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section-actor-wrapper {
   display: flex;
