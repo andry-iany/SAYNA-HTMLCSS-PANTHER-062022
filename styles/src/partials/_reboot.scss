@@ -11,3 +11,17 @@ body {
   font-family: "Cantarell", sans-serif;
   overflow: hidden auto;
 }
+
+input,
+button,
+textarea,
+input::placeholder,
+textarea::placeholder {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+button {
+  cursor: pointer;
+}

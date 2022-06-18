@@ -30,6 +30,35 @@ body {
   overflow: hidden auto;
 }
 
+input::-moz-placeholder, textarea::-moz-placeholder {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+input::placeholder,
+textarea::placeholder {
+  font: inherit;
+  color: inherit;
+  border: none;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
 :root {
   background-color: black;
 }
@@ -341,4 +370,47 @@ body {
   .section-hero-bio-wrapper {
     width: 33%;
   }
+}
+
+.section-form {
+  background: url("/assets/images/home/Pantherhome7.png") center/cover no-repeat;
+  padding: 4rem 1.5rem;
+}
+.section-form-heading {
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+.section-form form {
+  max-width: 720px;
+  padding: 3rem 14%;
+  border-radius: 20%;
+  margin: 0 auto;
+  background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.1019607843));
+  color: #021740;
+}
+.section-form h2 {
+  font-size: 2rem;
+}
+.section-form input,
+.section-form button,
+.section-form textarea {
+  border-radius: 1.3rem;
+  background: transparent;
+  padding: 0.5rem 1.4rem;
+}
+.section-form input,
+.section-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.2rem;
+  border: 1px solid #021740;
+}
+.section-form button {
+  background-color: #f2cef2;
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  margin: 0 auto;
+  text-transform: uppercase;
 }/*# sourceMappingURL=styles.css.map */
