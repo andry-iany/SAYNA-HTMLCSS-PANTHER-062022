@@ -23,6 +23,14 @@ body {
   );
 }
 
+.link-more {
+  text-decoration: underline;
+
+  &::after {
+    content: " >";
+  }
+}
+
 .nav {
   padding: 0.75rem;
 
@@ -97,6 +105,7 @@ body {
   align-items: center;
   grid-template-columns: 1fr;
   text-align: center;
+  padding-bottom: 3rem;
 
   &-wrapper-text {
     width: 85%;
@@ -113,6 +122,10 @@ body {
     font-family: "BEYNO", sans-serif;
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: variables.$violet-1;
+  }
+  &-description {
+    margin-bottom: 0.8rem;
   }
   &-wrapper-image {
     display: none;
@@ -166,5 +179,45 @@ body {
     &-subtitle {
       margin-bottom: 1.8rem;
     }
+    &-description {
+      width: 90%;
+    }
+  }
+}
+
+.section-actor {
+  display: flex;
+  flex: 0 0 auto;
+  width: 96%;
+  margin: 0 0 3rem auto;
+  padding-left: 4rem;
+  background: variables.$blue-3;
+
+  &-wrapper {
+    display: flex;
+  }
+
+  &-wrapper:first-child img {
+    transform: scale(1.15);
+    transform-origin: right;
+  }
+
+  &-image {
+    min-width: 250px;
+    max-width: 250px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: top;
+    }
+  }
+  &-text {
+    padding: 3rem 2rem;
+    min-width: 350px;
+  }
+  @include mixins.mq_md {
   }
 }
