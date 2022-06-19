@@ -18,16 +18,23 @@
   src: url(/assets/fonts/WakandaForever-Regular.ttf) format("truetype");
   font-weight: 400;
 }
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+  min-width: 375px;
+  scroll-behavior: smooth;
+  background-color: #021740;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   color: #ffffff;
   font-size: 1rem;
   font-family: "Cantarell", sans-serif;
-  overflow: hidden auto;
+  background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213f 0%, #0b0b0b 39.1%, rgba(2, 23, 64, 0.8392156863) 94.57%, rgba(2, 23, 64, 0) 100%);
 }
 
 input::-moz-placeholder, textarea::-moz-placeholder {
@@ -59,31 +66,9 @@ button {
   cursor: pointer;
 }
 
-:root {
-  background-color: #021740;
-  scroll-behavior: smooth;
-  min-width: 375px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background: radial-gradient(126.67% 350.28% at -21.35% 0%, #11213f 0%, #0b0b0b 39.1%, rgba(2, 23, 64, 0.8392156863) 94.57%, rgba(2, 23, 64, 0) 100%);
-}
-
-.link-more {
-  text-decoration: underline;
-}
-.link-more::after {
-  content: " >";
-}
-
-.logo:hover {
-  filter: brightness(0) saturate(100%) invert(71%) sepia(5%) saturate(1693%) hue-rotate(219deg) brightness(83%) contrast(92%);
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .nav {
@@ -151,124 +136,20 @@ body {
   }
 }
 
-#home .banner {
-  background: url("/assets/images/home/Pantherhome1..png");
-  background-position: center top;
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-#home .banner-title {
-  font-family: "Panthera", sans-serif;
-}
-#home .banner-subtitle {
-  font-family: "BEYNO", sans-serif;
-}
-#home .banner-wrapper-text {
-  width: 80%;
-}
-@media screen and (min-width: 768px) {
-  #home .banner {
-    grid-template-columns: 45% 55%;
-    background-size: auto 100%;
-    background-position: right;
-  }
-}
-#home .section-hero {
-  flex-direction: column-reverse;
+.logo:hover {
+  filter: brightness(0) saturate(100%) invert(71%) sepia(5%) saturate(1693%) hue-rotate(219deg) brightness(83%) contrast(92%);
 }
 
-#wakanda .banner {
-  background: url(/assets/images/wakanda/Pantherwakanda1.png) center/cover no-repeat;
+.link-more {
+  text-decoration: underline;
 }
-#wakanda .banner-title {
-  font-family: "BEYNO", sans-serif;
-}
-#wakanda .banner-subtitle {
-  font-family: "WakandaForever", sans-serif;
-  letter-spacing: 0.5rem;
-}
-#wakanda .banner-wrapper-text {
-  width: 87%;
-  padding: 8rem 0 9rem 0;
-}
-@media screen and (min-width: 768px) {
-  #wakanda .banner {
-    grid-template-columns: 50% 50%;
-  }
-}
-#wakanda .section-hero {
-  flex-direction: column;
-  position: relative;
-}
-#wakanda .section-hero > * {
-  z-index: 1;
-}
-#wakanda .section-hero::after {
-  content: "";
-  background: url("/assets/images/wakanda/Pantherwakanda2.png");
-  background-size: 100% auto;
-  background-position: top;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0.15;
-  z-index: 0;
-}
-
-#enigmas .banner > :not(.banner-wrapper-image) {
-  position: relative;
-}
-#enigmas .banner > :not(.banner-wrapper-image)::after {
-  content: "";
-  background: url(/assets/images/enigmas/Pantherenigme3.png);
-  background-size: 100%;
-  height: 5px;
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-#enigmas .banner-title {
-  font-family: "BEYNO", sans-serif;
-  margin-bottom: 8rem;
-}
-#enigmas .banner-wrapper-text {
-  margin: 0 auto 0 0;
-  padding: 8rem 0;
-}
-#enigmas .banner-wrapper-image img {
-  width: 100%;
-}
-#enigmas .banner-description {
-  margin: 0 0 0 auto;
-}
-@media screen and (min-width: 768px) {
-  #enigmas .banner {
-    grid-template-columns: 50% 50%;
-  }
-}
-#enigmas .enigma-rounded {
-  position: relative;
-}
-#enigmas .enigma-rounded::before {
-  content: "";
-  display: block;
-  background: url(/assets/images/enigmas/Pantherenigme2.png);
-  background-size: 100% 100%;
-  position: absolute;
-  top: -100%;
-  left: -25%;
-  width: 150%;
-  height: 300%;
+.link-more::after {
+  content: " >";
 }
 
 .banner {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr;
   text-align: center;
   padding-bottom: 3rem;
 }
@@ -298,7 +179,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .banner {
-    grid-template-columns: 40% 60%;
     text-align: start;
   }
   .banner-wrapper-text {
@@ -373,18 +253,19 @@ body {
   }
 }
 .section-actor-btn-next {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  height: 2.5rem;
-  width: 2.5rem;
-  background: #07338c;
-  border-radius: 50%;
   position: absolute;
   top: 50%;
   right: 2rem;
   transform: translateY(-50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #07338c;
+  border-radius: 50%;
 }
 .section-actor-wrapper {
   display: flex;
@@ -473,8 +354,8 @@ body {
   margin-bottom: 1rem;
 }
 .section-hero .status-group-item {
-  background-color: #3d2da6;
   color: #ffffff;
+  background-color: #3d2da6;
   padding: 0.5rem 0.75rem;
   font-size: 0.8rem;
   border-radius: 5px;
@@ -517,12 +398,12 @@ body {
   margin-bottom: 1.6rem;
 }
 .section-form form {
-  max-width: 720px;
-  padding: 3rem 14%;
-  border-radius: 3.5rem;
-  margin: 0 auto;
-  background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.1019607843));
   color: #021740;
+  margin: 0 auto;
+  padding: 3rem 14%;
+  max-width: 720px;
+  border-radius: 3.5rem;
+  background: linear-gradient(#ffffff, rgba(255, 255, 255, 0.1019607843));
 }
 .section-form h2 {
   font-size: 2rem;
@@ -544,10 +425,10 @@ body {
 .section-form button {
   background-color: #f2cef2;
   display: block;
+  margin: 0 auto;
   max-width: -webkit-max-content;
   max-width: -moz-max-content;
   max-width: max-content;
-  margin: 0 auto;
   text-transform: uppercase;
 }
 .section-form button:hover {
@@ -571,21 +452,21 @@ body {
 }
 
 .footer {
-  background: url(/assets/images/all/back_footer.png) center/cover no-repeat;
   padding: 8rem 2rem 5rem 2rem;
   text-align: center;
+  background: url(/assets/images/all/back_footer.png) center/cover no-repeat;
 }
 .footer-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   width: 90%;
   margin: 0 auto;
-  justify-content: center;
-  flex-wrap: wrap;
 }
 .footer-image {
   padding: 0 5%;
-  margin-bottom: 4rem;
   position: relative;
+  margin-bottom: 4rem;
 }
 .footer-image :not(img.footer-image-logo) {
   max-width: 300px;
@@ -598,8 +479,8 @@ body {
 }
 .footer-links {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem 1rem;
   margin-bottom: 6rem;
 }
@@ -644,11 +525,11 @@ body {
 .aside {
   position: fixed;
   top: 0;
-  height: 50vh;
   left: 0.5rem;
-  border-left: 3px solid #9e91b7;
+  height: 50vh;
   display: flex;
   flex-direction: column;
+  border-left: 3px solid #9e91b7;
 }
 .aside-line {
   height: 100%;
@@ -683,8 +564,8 @@ body {
 .section-enigmas-problem {
   font-family: "WakandaForever", sans-serif;
   width: 80%;
-  font-size: 2rem;
   color: #9e91b7;
+  font-size: 2rem;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
 }
@@ -735,4 +616,119 @@ body {
 }
 .section-enigmas form button:hover {
   box-shadow: 0 0 0.75rem 0 #f2cef2;
+}
+
+#home .banner {
+  background: url("/assets/images/home/Pantherhome1..png");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+#home .banner-title {
+  font-family: "Panthera", sans-serif;
+}
+#home .banner-subtitle {
+  font-family: "BEYNO", sans-serif;
+}
+#home .banner-wrapper-text {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  #home .banner {
+    grid-template-columns: 45% 55%;
+    background-size: auto 100%;
+    background-position: right;
+  }
+}
+#home .section-hero {
+  flex-direction: column-reverse;
+}
+
+#wakanda .banner {
+  background: url(/assets/images/wakanda/Pantherwakanda1.png) center/cover no-repeat;
+}
+#wakanda .banner-title {
+  font-family: "BEYNO", sans-serif;
+}
+#wakanda .banner-subtitle {
+  font-family: "WakandaForever", sans-serif;
+  letter-spacing: 0.5rem;
+}
+#wakanda .banner-wrapper-text {
+  width: 87%;
+  padding: 8rem 0 9rem 0;
+}
+@media screen and (min-width: 768px) {
+  #wakanda .banner {
+    grid-template-columns: 50% 50%;
+  }
+}
+#wakanda .section-hero {
+  position: relative;
+  flex-direction: column;
+}
+#wakanda .section-hero > * {
+  position: relative;
+  z-index: 1;
+}
+#wakanda .section-hero::after {
+  content: "";
+  background: url("/assets/images/wakanda/Pantherwakanda2.png");
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+#enigmas .banner > :not(.banner-wrapper-image) {
+  position: relative;
+}
+#enigmas .banner > :not(.banner-wrapper-image)::after {
+  content: "";
+  background: url(/assets/images/enigmas/Pantherenigme3.png);
+  background-size: 100%;
+  height: 5px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+#enigmas .banner-title {
+  font-family: "BEYNO", sans-serif;
+  margin-bottom: 8rem;
+}
+#enigmas .banner-wrapper-text {
+  margin: 0 auto 0 0;
+  padding: 8rem 0;
+}
+#enigmas .banner-wrapper-image img {
+  width: 100%;
+}
+#enigmas .banner-description {
+  margin: 0 0 0 auto;
+}
+@media screen and (min-width: 768px) {
+  #enigmas .banner {
+    grid-template-columns: 50% 50%;
+  }
+}
+#enigmas .enigma-rounded {
+  position: relative;
+}
+#enigmas .enigma-rounded::before {
+  content: "";
+  display: block;
+  background: url(/assets/images/enigmas/Pantherenigme2.png);
+  background-size: 100% 100%;
+  position: absolute;
+  top: -100%;
+  left: -25%;
+  width: 150%;
+  height: 300%;
 }/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,5 @@
+// this file contains reusable codes for our style
+
 @use "variables";
 
 // media queries
@@ -28,4 +30,8 @@
   flex-direction: $direction;
   justify-content: $justify-content;
   align-items: $align-items;
+}
+
+@mixin flex_center($direction: row) {
+  @include flex($direction, center, center);
 }
