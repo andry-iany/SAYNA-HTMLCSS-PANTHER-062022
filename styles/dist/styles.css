@@ -501,4 +501,35 @@ body {
   .footer-links {
     justify-content: space-between;
   }
+}
+
+.aside {
+  position: fixed;
+  top: 0;
+  height: 50vh;
+  left: 0.5rem;
+  border-left: 3px solid #9e91b7;
+  display: flex;
+  flex-direction: column;
+}
+.aside-line {
+  height: 100%;
+  border-right: 3px solid #9e91b7;
+}
+.aside-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem 0 0 0.2rem;
+  margin-right: -0.5rem;
+}
+@media screen and (min-width: 576px) {
+  .aside {
+    left: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .aside {
+    left: 1.5rem;
+  }
 }/*# sourceMappingURL=styles.css.map */
