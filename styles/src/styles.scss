@@ -117,6 +117,9 @@ body {
       grid-template-columns: 40% 60%;
     }
   }
+  .section-hero {
+    flex-direction: column-reverse;
+  }
 }
 #wakanda {
   // TODO: edit the image
@@ -138,6 +141,9 @@ body {
     @include mixins.mq_md {
       grid-template-columns: 50% 50%;
     }
+  }
+  .section-hero {
+    flex-direction: column;
   }
 }
 .banner {
@@ -294,7 +300,6 @@ body {
 
 .section-hero {
   display: flex;
-  flex-direction: column-reverse;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 3rem;
@@ -365,7 +370,8 @@ body {
     }
   }
   @include mixins.mq_md {
-    flex-direction: row;
+    flex-direction: row !important;
+
     &-bio {
       margin: 10rem 0 5rem 0;
     }

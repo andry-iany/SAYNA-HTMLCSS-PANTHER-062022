@@ -161,6 +161,9 @@ body {
     grid-template-columns: 40% 60%;
   }
 }
+#home .section-hero {
+  flex-direction: column-reverse;
+}
 
 #wakanda .banner {
   background: url(/assets/images/wakanda/Pantherwakanda1.png) center/cover no-repeat;
@@ -180,6 +183,9 @@ body {
   #wakanda .banner {
     grid-template-columns: 50% 50%;
   }
+}
+#wakanda .section-hero {
+  flex-direction: column;
 }
 
 .banner {
@@ -330,7 +336,6 @@ body {
 
 .section-hero {
   display: flex;
-  flex-direction: column-reverse;
   width: 80%;
   margin: 0 auto;
   padding-bottom: 3rem;
@@ -393,7 +398,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .section-hero {
-    flex-direction: row;
+    flex-direction: row !important;
   }
   .section-hero-bio {
     margin: 10rem 0 5rem 0;
