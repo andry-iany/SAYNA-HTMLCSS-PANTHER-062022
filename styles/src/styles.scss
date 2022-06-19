@@ -122,7 +122,6 @@ body {
   }
 }
 #wakanda {
-  // TODO: edit the image
   .banner {
     background: url(/assets/images/wakanda/Pantherwakanda1.png) center / cover
       no-repeat;
@@ -146,6 +145,65 @@ body {
     flex-direction: column;
   }
 }
+#enigmas {
+  .banner {
+    // background: url(/assets/images/enigmas/Pantherenigme1.png);
+    // background-size: cover;
+    // background-repeat: no-repeat;
+    // background-position: top;
+
+    > :not(.banner-wrapper-image) {
+      // grid-column-start: 2;
+      position: relative;
+
+      &::after {
+        content: "";
+        background: url(/assets/images/enigmas/Pantherenigme3.png);
+        background-size: 100%;
+        height: 5px;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+
+    &-title {
+      font-family: "BEYNO", sans-serif;
+      margin-bottom: 8rem;
+    }
+
+    &-wrapper-text {
+      margin: 0 auto 0 0;
+      padding: 8rem 0;
+    }
+
+    &-wrapper-image img {
+      width: 100%;
+    }
+
+    &-description {
+      margin: 0 0 0 auto;
+      position: relative;
+      &::before {
+        content: "";
+        display: block;
+        background: url(/assets/images/enigmas/Pantherenigme2.png);
+        background-size: 100% 100%;
+        position: absolute;
+        top: -100%;
+        left: -25%;
+        width: 150%;
+        height: 300%;
+      }
+    }
+
+    @include mixins.mq_md {
+      grid-template-columns: 50% 50%;
+    }
+  }
+}
+
 .banner {
   display: grid;
   align-items: center;
