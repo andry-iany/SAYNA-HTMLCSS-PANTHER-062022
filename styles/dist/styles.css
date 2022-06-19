@@ -147,6 +147,41 @@ body {
   }
 }
 
+#home .banner-title {
+  font-family: "Panthera", sans-serif;
+}
+#home .banner-subtitle {
+  font-family: "BEYNO", sans-serif;
+}
+#home .banner-wrapper-text {
+  width: 80%;
+}
+@media screen and (min-width: 768px) {
+  #home .banner {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+#wakanda .banner {
+  background: url(/assets/images/wakanda/Pantherwakanda1.png) center/cover no-repeat;
+}
+#wakanda .banner-title {
+  font-family: "BEYNO", sans-serif;
+}
+#wakanda .banner-subtitle {
+  font-family: "WakandaForever", sans-serif;
+  letter-spacing: 0.5rem;
+}
+#wakanda .banner-wrapper-text {
+  width: 87%;
+  padding: 8rem 0 9rem 0;
+}
+@media screen and (min-width: 768px) {
+  #wakanda .banner {
+    grid-template-columns: 50% 50%;
+  }
+}
+
 .banner {
   display: grid;
   align-items: center;
@@ -160,13 +195,11 @@ body {
   padding: 4rem 0 8rem 0;
 }
 .banner-title {
-  font-family: "Panthera", sans-serif;
   font-size: 2rem;
   color: #9e91b7;
   margin-bottom: 0.7rem;
 }
 .banner-subtitle {
-  font-family: "BEYNO", sans-serif;
   font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #9e91b7;
