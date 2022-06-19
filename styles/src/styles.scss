@@ -298,6 +298,13 @@ body {
   font-size: 0.875rem;
 }
 
+// change it with actual youtube video
+.section-video {
+  background: variables.$blue-1;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
 .section-hero {
   display: flex;
   width: 80%;

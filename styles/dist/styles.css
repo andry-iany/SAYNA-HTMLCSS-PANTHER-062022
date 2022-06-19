@@ -334,6 +334,12 @@ body {
   font-size: 0.875rem;
 }
 
+.section-video {
+  background: #3d2da6;
+  height: 200px;
+  margin-bottom: 2rem;
+}
+
 .section-hero {
   display: flex;
   width: 80%;
