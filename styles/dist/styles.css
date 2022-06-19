@@ -637,6 +637,7 @@ body {
 .section-enigmas {
   width: 80%;
   margin: 0 auto;
+  padding: 5rem 0;
 }
 .section-enigmas-problem {
   font-family: "WakandaForever", sans-serif;
@@ -662,4 +663,35 @@ body {
 }
 .section-enigmas-hint > :first-child {
   margin-bottom: 1.8rem;
+}
+.section-enigmas form {
+  width: 40%;
+}
+.section-enigmas form p {
+  margin-bottom: 1rem;
+}
+.section-enigmas form input,
+.section-enigmas form button {
+  border-radius: 1.3rem;
+  background: transparent;
+  padding: 0.5rem 1.4rem;
+}
+.section-enigmas form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 4rem;
+  border: 1px solid #ffffff;
+}
+.section-enigmas form button {
+  color: #021740;
+  background-color: #f2cef2;
+  display: block;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+.section-enigmas form button:hover {
+  box-shadow: 0 0 0.75rem 0 #f2cef2;
 }/*# sourceMappingURL=styles.css.map */

@@ -612,6 +612,7 @@ body {
 .section-enigmas {
   width: 80%;
   margin: 0 auto;
+  padding: 5rem 0;
 
   &-problem {
     font-family: "WakandaForever", sans-serif;
@@ -637,6 +638,36 @@ body {
 
     > :first-child {
       margin-bottom: 1.8rem;
+    }
+  }
+
+  form {
+    width: 40%;
+    p {
+      margin-bottom: 1rem;
+    }
+    input,
+    button {
+      border-radius: 1.3rem;
+      background: transparent;
+      padding: 0.5rem 1.4rem;
+    }
+    input {
+      display: block;
+      width: 100%;
+      margin-bottom: 4rem;
+      border: 1px solid variables.$white;
+    }
+    button {
+      color: variables.$blue-3;
+      background-color: variables.$pink-1;
+      display: block;
+      max-width: max-content;
+      text-transform: uppercase;
+      margin: 0 auto;
+      &:hover {
+        box-shadow: 0 0 0.75rem 0 variables.$pink-1;
+      }
     }
   }
 }
