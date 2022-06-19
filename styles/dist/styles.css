@@ -186,6 +186,24 @@ body {
 }
 #wakanda .section-hero {
   flex-direction: column;
+  position: relative;
+}
+#wakanda .section-hero > * {
+  z-index: 1;
+}
+#wakanda .section-hero::after {
+  content: "";
+  background: url("/assets/images/wakanda/Pantherwakanda2.png");
+  background-size: 100% auto;
+  background-position: top;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.15;
+  z-index: 0;
 }
 
 #enigmas .banner > :not(.banner-wrapper-image) {
@@ -382,9 +400,10 @@ body {
 }
 
 .section-video {
-  background: #3d2da6;
-  height: 200px;
   margin-bottom: 2rem;
+}
+.section-video iframe {
+  width: 100%;
 }
 
 .section-hero {
