@@ -560,6 +560,7 @@ a {
   width: 80%;
   margin: 0 auto;
   padding: 6rem 0 8rem 0;
+  text-align: center;
 }
 .section-enigmas-problem {
   font-family: "WakandaForever", sans-serif;
@@ -568,9 +569,11 @@ a {
   font-size: 2rem;
   margin-bottom: 4rem;
   letter-spacing: 0.5rem;
+  margin: 0 auto 3rem auto;
 }
 .section-enigmas-solution-wrapper {
   display: flex;
+  flex-direction: column;
   gap: 20%;
 }
 .section-enigmas-transcript > :first-child {
@@ -580,14 +583,15 @@ a {
   font-family: "WakandaForever", sans-serif;
 }
 .section-enigmas-hint {
-  margin-top: 8rem;
+  margin: 3rem 0;
   text-align: center;
 }
 .section-enigmas-hint > :first-child {
   margin-bottom: 1.8rem;
 }
 .section-enigmas form {
-  width: 40%;
+  width: 80%;
+  margin: 0 auto;
 }
 .section-enigmas form p {
   margin-bottom: 1rem;
@@ -616,6 +620,21 @@ a {
 }
 .section-enigmas form button:hover {
   box-shadow: 0 0 0.75rem 0 #f2cef2;
+}
+@media screen and (min-width: 768px) {
+  .section-enigmas {
+    text-align: left;
+  }
+  .section-enigmas-problem {
+    margin-left: 0;
+  }
+  .section-enigmas-solution-wrapper {
+    flex-direction: row;
+  }
+  .section-enigmas form {
+    width: 40%;
+    margin: 0;
+  }
 }
 
 #home .banner {
@@ -686,10 +705,17 @@ a {
   z-index: 0;
 }
 
-#enigmas .banner > :not(.banner-wrapper-image) {
-  position: relative;
+#enigmas .banner {
+  background: url("/assets/images/enigmas/Pantherenigme1.png");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
-#enigmas .banner > :not(.banner-wrapper-image)::after {
+#enigmas .banner > div {
+  position: relative;
+  grid-column-start: 2;
+}
+#enigmas .banner > div::after {
   content: "";
   background: url(/assets/images/enigmas/Pantherenigme3.png);
   background-size: 100%;
@@ -701,11 +727,9 @@ a {
 }
 #enigmas .banner-title {
   font-family: "BEYNO", sans-serif;
-  margin-bottom: 8rem;
 }
 #enigmas .banner-wrapper-text {
-  margin: 0 auto 0 0;
-  padding: 8rem 0;
+  padding: 4rem 0 8rem 0;
 }
 #enigmas .banner-wrapper-image img {
   width: 100%;
@@ -716,19 +740,30 @@ a {
 @media screen and (min-width: 768px) {
   #enigmas .banner {
     grid-template-columns: 50% 50%;
+    background-position: left;
+    background-size: auto 100%;
+  }
+  #enigmas .banner-title {
+    margin-bottom: 8rem;
+  }
+  #enigmas .banner-wrapper-text {
+    margin: 0 auto 0 0;
+    padding: 8rem 0;
   }
 }
 #enigmas .enigma-rounded {
   position: relative;
 }
-#enigmas .enigma-rounded::before {
-  content: "";
-  display: block;
-  background: url(/assets/images/enigmas/Pantherenigme2.png);
-  background-size: 100% 100%;
-  position: absolute;
-  top: -100%;
-  left: -25%;
-  width: 150%;
-  height: 300%;
+@media screen and (min-width: 768px) {
+  #enigmas .enigma-rounded::before {
+    content: "";
+    display: block;
+    background: url(/assets/images/enigmas/Pantherenigme2.png);
+    background-size: 100% 100%;
+    position: absolute;
+    top: -100%;
+    left: -25%;
+    width: 150%;
+    height: 300%;
+  }
 }/*# sourceMappingURL=styles.css.map */
