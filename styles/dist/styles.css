@@ -347,6 +347,10 @@ body {
 }
 
 .section-actor {
+  padding: 4rem 0;
+  overflow: hidden;
+}
+.section-actor > div {
   display: flex;
   flex: 0 0 auto;
   width: 90%;
@@ -356,7 +360,7 @@ body {
   position: relative;
 }
 @media screen and (min-width: 992px) {
-  .section-actor {
+  .section-actor > div {
     width: 95%;
   }
 }
