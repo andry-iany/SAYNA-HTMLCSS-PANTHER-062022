@@ -151,6 +151,12 @@ body {
   }
 }
 
+#home .banner {
+  background: url("/assets/images/home/Pantherhome1..png");
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
 #home .banner-title {
   font-family: "Panthera", sans-serif;
 }
@@ -162,7 +168,9 @@ body {
 }
 @media screen and (min-width: 768px) {
   #home .banner {
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 45% 55%;
+    background-size: auto 100%;
+    background-position: right;
   }
 }
 #home .section-hero {
