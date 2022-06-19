@@ -214,9 +214,16 @@ body {
 }
 #enigmas .banner-description {
   margin: 0 0 0 auto;
+}
+@media screen and (min-width: 768px) {
+  #enigmas .banner {
+    grid-template-columns: 50% 50%;
+  }
+}
+#enigmas .enigma-rounded {
   position: relative;
 }
-#enigmas .banner-description::before {
+#enigmas .enigma-rounded::before {
   content: "";
   display: block;
   background: url(/assets/images/enigmas/Pantherenigme2.png);
@@ -226,11 +233,6 @@ body {
   left: -25%;
   width: 150%;
   height: 300%;
-}
-@media screen and (min-width: 768px) {
-  #enigmas .banner {
-    grid-template-columns: 50% 50%;
-  }
 }
 
 .banner {
@@ -630,4 +632,34 @@ body {
   .aside {
     left: 1.5rem;
   }
+}
+
+.section-enigmas {
+  width: 80%;
+  margin: 0 auto;
+}
+.section-enigmas-problem {
+  font-family: "WakandaForever", sans-serif;
+  width: 80%;
+  font-size: 2rem;
+  color: #9e91b7;
+  margin-bottom: 4rem;
+  letter-spacing: 0.5rem;
+}
+.section-enigmas-solution-wrapper {
+  display: flex;
+  gap: 20%;
+}
+.section-enigmas-transcript > :first-child {
+  margin-bottom: 1.8rem;
+}
+.section-enigmas-transcript-item {
+  font-family: "WakandaForever", sans-serif;
+}
+.section-enigmas-hint {
+  margin-top: 8rem;
+  text-align: center;
+}
+.section-enigmas-hint > :first-child {
+  margin-bottom: 1.8rem;
 }/*# sourceMappingURL=styles.css.map */

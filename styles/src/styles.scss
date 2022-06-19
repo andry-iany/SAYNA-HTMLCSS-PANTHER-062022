@@ -147,13 +147,7 @@ body {
 }
 #enigmas {
   .banner {
-    // background: url(/assets/images/enigmas/Pantherenigme1.png);
-    // background-size: cover;
-    // background-repeat: no-repeat;
-    // background-position: top;
-
     > :not(.banner-wrapper-image) {
-      // grid-column-start: 2;
       position: relative;
 
       &::after {
@@ -184,22 +178,25 @@ body {
 
     &-description {
       margin: 0 0 0 auto;
-      position: relative;
-      &::before {
-        content: "";
-        display: block;
-        background: url(/assets/images/enigmas/Pantherenigme2.png);
-        background-size: 100% 100%;
-        position: absolute;
-        top: -100%;
-        left: -25%;
-        width: 150%;
-        height: 300%;
-      }
     }
 
     @include mixins.mq_md {
       grid-template-columns: 50% 50%;
+    }
+  }
+
+  .enigma-rounded {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      background: url(/assets/images/enigmas/Pantherenigme2.png);
+      background-size: 100% 100%;
+      position: absolute;
+      top: -100%;
+      left: -25%;
+      width: 150%;
+      height: 300%;
     }
   }
 }
@@ -609,5 +606,37 @@ body {
   }
   @include mixins.mq_md {
     left: 1.5rem;
+  }
+}
+
+.section-enigmas {
+  width: 80%;
+  margin: 0 auto;
+
+  &-problem {
+    font-family: "WakandaForever", sans-serif;
+    width: 80%;
+    font-size: 2rem;
+    color: variables.$violet-1;
+    margin-bottom: 4rem;
+    letter-spacing: 0.5rem;
+  }
+  &-solution-wrapper {
+    display: flex;
+    gap: 20%;
+  }
+  &-transcript > :first-child {
+    margin-bottom: 1.8rem;
+  }
+  &-transcript-item {
+    font-family: "WakandaForever", sans-serif;
+  }
+  &-hint {
+    margin-top: 8rem;
+    text-align: center;
+
+    > :first-child {
+      margin-bottom: 1.8rem;
+    }
   }
 }
