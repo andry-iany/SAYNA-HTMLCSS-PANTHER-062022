@@ -205,8 +205,9 @@ body {
   position: relative;
 
   &-btn-next {
-    height: 2rem;
-    width: 2rem;
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
     background: variables.$blue-2;
     border-radius: 50%;
     position: absolute;
@@ -382,6 +383,9 @@ body {
     max-width: max-content;
     margin: 0 auto;
     text-transform: uppercase;
+    &:hover {
+      box-shadow: 0 0 0.75rem 0 variables.$pink-1;
+    }
   }
 
   @include mixins.mq_sm {
@@ -393,6 +397,10 @@ body {
 }
 
 .footer {
+  background: url(/assets/images/all/back_footer.png) center/cover no-repeat;
+  padding: 8rem 2rem 5rem 2rem;
+  text-align: center;
+
   &-wrapper {
     display: flex;
     width: 90%;
@@ -406,7 +414,7 @@ body {
     position: relative;
   }
   &-image :not(img.footer-image-logo) {
-    width: 300px;
+    max-width: 300px;
   }
   &-image-logo {
     position: absolute;
@@ -416,11 +424,11 @@ body {
   }
   &-links {
     display: flex;
-    justify-content: space-between;
-    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem 1rem;
     margin-bottom: 6rem;
   }
-
   &-links-title {
     font-size: 1.375rem;
     letter-spacing: 0.28rem;
@@ -443,5 +451,15 @@ body {
     background: variables.$white;
     border-radius: 50%;
     margin: 0 0.3rem 0.1rem 0.3rem;
+  }
+  &-image:hover,
+  &-links-socials > *:hover {
+    transform: scale(1.1);
+  }
+  @include mixins.mq_sm {
+    text-align: left;
+    &-links {
+      justify-content: space-between;
+    }
   }
 }
